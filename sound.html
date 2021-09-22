@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/sound.css"></link>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img class="logo"  src="image1/logo.png">
+            <div class="menu">
+                <ul class="links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Specification</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="main">
+            <div class="left">
+                <h1>THE <br> REAL <br>SOUND</h1>
+            </div>
+            <div class="right">
+                <p>Click Here to Listen</p>
+                <img id="icon" src="image1/play.png">
+            </div>
+          
+        </div>
+    </div>
+        <audio  id="song">
+
+            <source src="image1/music.mp3" type="audio/mp3">
+        </audio>>
+
+    
+    <script>
+        var mysong=document.getElementById("song");
+        var myicon=document.getElementById("icon");
+        myicon.onclick=function(){
+            if(mysong.paused){
+                mysong.play();
+                myicon.src="image1/pause.png";
+            }else{
+                mysong.pause();
+                myicon.src="image1/play.png";
+            }
+
+      
+        }
+    </script>
+</body>
+</html>
